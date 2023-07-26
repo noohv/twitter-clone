@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <div className="w-full h-full flex justify-center items-center relative bg-black">
       <div className="max-w-screen-xl w-full h-full flex relative">
-        <section className="fixed w-[275px] flex flex-col items-stretch h-screen">
+        <section className="fixed w-72 flex flex-col items-stretch h-screen">
           <div className='flex flex-col items-stretch h-full space-y-4 mt-4'>
             {
               NAVIGATION_ITEMS.map((item) => (
@@ -53,9 +53,15 @@ const Home = () => {
               Tweet
             </button>
           </div>
-          <button className='w-full m-4 bg-primary flex items-center rounded-full p-4 text-xl text-center hover:bg-opacity-70 transition duration-200'>
-            <div className='rounded-full bg-slate-400 w-8 h-8'></div>
-            <div></div>
+          <button className='rounded-full bg-transparent flex items-center space-x-2 m-4 p-4 text-center hover:bg-opacity-70 transition duration-200 w-full justify-between hover:bg-white/10'>
+            <div className='flex items-center text-sm space-x-2'>
+              <div className='rounded-full bg-slate-400 w-12 h-12'>
+              </div>
+              <div className='text-left text-xs'>
+                <div className='font-semibold'>Username</div>
+                <div className=''>@usertag</div>
+              </div>
+            </div>
             <div>
               <BsThreeDots />
             </div>
